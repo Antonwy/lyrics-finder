@@ -1,32 +1,75 @@
-.App {
+.title {
   text-align: center;
+  font-weight: bold;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchForm {
+  width: 90%;
+  max-width: 300px;
   display: flex;
+  margin: auto;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.searchForm input {
+  margin-top: 10px;
+  border: none;
+  border-radius: 3px;
+  height: 20px;
+  outline: none;
+  padding: 5px;
+  background-color: rgb(29, 29, 29);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.searchForm button {
+  position: relative;
+  margin-top: 10px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(59, 59, 59);
+  color: white;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchForm button:before {
+  content: "Search";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: rgb(245, 56, 56);
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 400ms;
+  outline: none;
+}
+
+.searchForm button:hover:before {
+  opacity: 1;
+  height: 100%;
+}
+
+.searchForm p {
+  color: red;
+  font-size: 12px;
+}
+
+.name {
+  text-align: center;
+  margin-top: 10px;
+  color: rgb(245, 56, 56);
+}
+
+.lyrics {
+  white-space: pre-line;
+  text-align: center;
+  margin: 30px 0px;
 }
